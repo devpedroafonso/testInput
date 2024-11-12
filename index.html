@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio</title>
+</head>
+<body>
+
+    <section class="containerMain">
+            <section class="firstColum">
+                <h2 class="title">Bem-Vindo ao teste dos exercicios de logica</h2>
+                <p class="description">Aqui tera varios inputs para testar</p>
+            </section> <!--firstColum-->
+
+            <section class="secondColum">
+
+                <section class="tabuada">
+                    <h3>Tabuada apenas de multiplos pares</h3>
+                    <p>Digite um número inteiro para verificar a tabuada</p>
+                    <section class="divTabuada">
+                        <input id="numeroTabuada" type="number" placeholder="Digite um número">
+                        <button id="buttonTabuada" onclick="gerarTabuadaPar()">Gerar Tabuada</button>
+                    </section>
+                    <p id="resultadoTabuada"></p>
+                </section><!--tabuada-->
+
+                <section class="imparPar">
+                    <h3>Verificação de Par ou Ímpar</h3>
+                    <p>Digite um número inteiro para verificar se é par ou ímpar</p>
+                    <div>
+                        <input id="imparPar" type="number" placeholder="Digite um número">
+                        <button id="buttonImparPar" onclick="gerarImparPar()">Verificar</button>
+                    </div>
+                    <p id="resultadoImparPar"></p>
+                </section><!--impar ou par-->
+
+                <section class="media">
+                    <h3>Calculadora de Média</h3>
+                    <p>Digite as notas de 3 provas para calcular a média</p>
+                    <section class="mediaInput">
+                        <input id="nota1" type="text" placeholder="Nota 1">
+                        <input id="nota2" type="text" placeholder="Nota 2">
+                        <input id="nota3" type="text" placeholder="Nota 3">
+                    </section>
+                    <button id="buttonMedia" onclick="gerarMedia()">Calcular Média</button>
+                    <p id="resultadoMedia"></p>
+                </section><!--Calculadora de Média-->
+
+                <section class="somaPar">
+                    <h3>Soma dos Números Pares</h3>
+                    <p>Digite um número inteiro positivo para somar todos os pares até ele</p>
+                    <div>
+                        <input id="somaPar" type="text" placeholder="Digite um número">
+                        <button id="nuttonSomaPar" onclick="gerarSomaPar()">Somar</button>
+                    </div>
+                    <p id="resultadoSomaPar"></p>
+                </section><!--Soma dos Números Pares-->
+
+                <section class="login">
+                    <h3>Validação de Login e Senha</h3>
+                    <p>Digite o usuario e senha. O usuario deve ser "admin" e a senha "1234"</p>
+                    <div>
+                        <input id="usuario" type="text" placeholder="Usuario">
+                        <input id="senha" type="password" placeholder="Senha">
+                    </div>
+                    <button id="buttonLogin" onclick="gerarValidacao()">Validar</button>
+                    <p id="resultadoLogin"></p>
+                </section><!--validação de Login e Senha-->
+
+                <section class="fatorial">
+                    <h3>Calculadora de Fatorial</h3>
+                    <p>Digite um número inteiro para calcular o seu fatorial</p>
+                    <div>
+                        <input id="fatorial" type="number" placeholder="Digite um número">
+                        <button id="buttonFatorial" onclick="gerarFatorial()">Calcular</button>
+                    </div>
+                    <p id="resultadoFatorial"></p>
+                </section><!--Calculadora de Farotial-->
+            </section> <!--secondColum-->
+    </section><!--containerMain-->       
+       
+
+    <script src="script.js"></script>
+</body>
+</html>
