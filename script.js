@@ -47,8 +47,13 @@ function gerarMedia() {
 
     const resultadoElemento = document.getElementById("resultadoMedia");
 
-    if (isNaN(numero1 || numero2 || numero3) || numero<=0) {
+    if (isNaN(numero1 || numero2 || numero3)){
         resultadoElemento.innerText = "Por favor, digite um número"
+        return;
+    }
+
+    if(numero1<0|| numero2<0|| numero3<0){
+        resultadoElemento.innerText = "Por favor, digite um número positivo"
         return;
     }
 
