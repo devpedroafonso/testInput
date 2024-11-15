@@ -122,7 +122,7 @@ h2.title{
     max-width: 15em;
 }
 
-.media button, .tabuada button, .imparPar button, .somaPar button, .login button, .fatorial button{
+.media button, .tabuada button, .imparPar button, .somaPar button, .login button, .fatorial button, .IMC button{
     background-color: black;
     color: white;
     height: 25px;
@@ -133,7 +133,7 @@ h2.title{
     cursor: pointer;
 }
 
-.media button:hover, .tabuada button:hover, .imparPar button:hover, .somaPar button:hover, .login button:hover, .fatorial button:hover{
+.media button:hover, .tabuada button:hover, .imparPar button:hover, .somaPar button:hover, .login button:hover, .fatorial button:hover, .IMC button:hover{
     background-color: #079ba5;
 }
 
@@ -162,6 +162,18 @@ h2.title{
 }
 
 .fatorial{
+    width: 450px;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    gap: 0.5rem;
+}
+
+.IMC{
     width: 450px;
     height: 20%;
     align-items: center;

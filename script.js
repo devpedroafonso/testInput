@@ -3,7 +3,7 @@ function gerarTabuadaPar() {
 
     const resultadoElemento = document.getElementById("resultadoTabuada");
 
-    if (isNaN(numero) || numero<=0) {
+    if (isNaN(numero) || numero <= 0) {
         resultadoElemento.innerText = "Por favor, diigite um numero inteiro para realizar a tabuada.";
         return;
     }
@@ -24,7 +24,7 @@ function gerarImparPar() {
 
     const resultadoElemento = document.getElementById("resultadoImparPar");
 
-    if (isNaN(numero) || numero<=0) {
+    if (isNaN(numero) || numero <= 0) {
         resultadoElemento.innerText = "Por favor, diigite um numero inteiro para vermos se o nuemro é Par ou Impar.";
         return;
     }
@@ -47,12 +47,12 @@ function gerarMedia() {
 
     const resultadoElemento = document.getElementById("resultadoMedia");
 
-    if (isNaN(numero1 || numero2 || numero3)){
+    if (isNaN(numero1 || numero2 || numero3)) {
         resultadoElemento.innerText = "Por favor, digite um número";
         return;
     }
 
-    if(numero1<0|| numero2<0|| numero3<0){
+    if (numero1 < 0 || numero2 < 0 || numero3 < 0) {
         resultadoElemento.innerText = "Por favor, digite um número positivo";
         return;
     }
@@ -66,7 +66,7 @@ function gerarSomaPar() {
     const resultadoElemento = document.getElementById("resultadoSomaPar");
 
 
-    if (isNaN(numero) || numero<=0) {
+    if (isNaN(numero) || numero <= 0) {
         resultadoElemento.innerText = "Por favor, digite um número"
         return;
     }
@@ -74,49 +74,86 @@ function gerarSomaPar() {
     let soma = 0;
 
     for (let i = 2; i <= numero; i += 2) {
-            soma += i;
+        soma += i;
     }
 
 
     resultadoElemento.innerText = `A soma dos números pares até ${numero} é igual a: ${soma}`;
 }
 
-function gerarValidacao(){
+function gerarValidacao() {
     const usuario = document.getElementById("usuario").value;
 
     const senha = document.getElementById("senha").value;
 
     const resultadoELemento = document.getElementById("resultadoLogin");
 
-    if (usuario!== "admin" && senha!== "1234"){
+    if (usuario !== "admin" && senha !== "1234") {
         resultadoELemento.innerText = "usuario ou senha incorretos"
     }
 
-    else{
+    else {
         resultadoELemento.innerText = "Login bem-sucedido"
     }
 }
 
-function gerarFatorial(){
+function gerarFatorial() {
     const numero = parseInt(document.getElementById("fatorial").value);
 
     const resultadoElemento = document.getElementById("resultadoFatorial");
-    
 
-    if(isNaN(numero) || numero<0){
+
+    if (isNaN(numero) || numero < 0) {
         resultadoElemento.innerText = "Digite um número inteiro e positivo por favor.";
         return;
     }
 
-    if(numero == 0 ){
+    if (numero == 0) {
         resultadoElemento.innerText = `O resultado do número 0! é: 1`;
     }
 
     let resultado = 1;
 
-    for(let i=numero; i>=2; i--){
+    for (let i = numero; i >= 2; i--) {
         resultado *= i;
     }
 
     resultadoElemento.innerText = `O resultado do número ${numero}! é: ${resultado}`;
+}
+
+function gerarIMC() {
+    const altura = parseFloat(document.getElementById("alturaIMC").value)
+
+    const peso = parseFloat(document.getElementById("pesoIMC").value)
+
+    const resultadoElemento = document.getElementById("resultadoIMC")
+
+
+    if (isNaN(altura) || isNaN(peso)) {
+        resultadoElemento.innerText = "Digite um número por favor";
+        return;
+    }
+
+    if (altura <= 0 || peso <= 0) {
+        resultadoElemento.innerText = "Por favor, digite um número positivo";
+        return;
+    }
+
+    const IMC = (peso / (altura * altura));
+
+    if (IMC < 18.5) {
+        resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você está abaixo ideal`;
+    }
+
+    else if (IMC == 18.5 || IMC <= 24.99) {
+        resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você está com o peso ideal`;
+    }
+
+    else if (IMC == 25 || IMC <= 24.99) {
+        resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você esté sobrepeso`
+    }
+
+    else{
+        resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você está com obesidade`
+    }
 }
