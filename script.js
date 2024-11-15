@@ -130,7 +130,7 @@ function gerarIMC() {
 
 
     if (isNaN(altura) || isNaN(peso)) {
-        resultadoElemento.innerText = "Digite um número por favor";
+        resultadoElemento.innerText = "Por favor, digite um número positivo";
         return;
     }
 
@@ -149,11 +149,18 @@ function gerarIMC() {
         resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você está com o peso ideal`;
     }
 
-    else if (IMC == 25 || IMC <= 24.99) {
+    else if (IMC == 25 || IMC <= 29.99) {
         resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você esté sobrepeso`
     }
 
-    else{
+    else {
         resultadoElemento.innerText = `O seu IMC é ${IMC.toFixed(2)} e você está com obesidade`
+    }
+
+}
+
+function verificarEnter(event) {
+    if (event.keyCode === 13) {
+        gerarIMC();
     }
 }
