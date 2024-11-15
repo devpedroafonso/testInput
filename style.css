@@ -115,7 +115,7 @@ h2.title{
     max-width: 10em;
 }
 
-.tabuada input, .imparPar input, .somaPar input, .login input, .fatorial input{
+.tabuada input, .imparPar input, .somaPar input, .login input, .fatorial input, .IMC input{
     padding: 2px;
     border: 0.1px solid;
     border-radius: 5px;
